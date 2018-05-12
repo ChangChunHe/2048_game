@@ -2,7 +2,8 @@ function main
 clear 
 close all
 clc
-global  hax start_tag
+global  hax start_tag fail_tag
+fail_tag = 0;
 screen_size = get(0,'screensize');
 mean_size = mean(screen_size(3:4));
 hf = figure('resize','off','name','',...
