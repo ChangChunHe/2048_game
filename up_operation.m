@@ -1,8 +1,11 @@
 function up_operation(~, ~)
-global board rate_2 fail_tag
-% down operation
+global board rate_2 fail_tag start_tag
+% up operation
 if fail_tag == 1
     return
+end
+if start_tag == 0
+    start
 end
 board_1 = zeros(4);
 for k = 1:size(board,1)

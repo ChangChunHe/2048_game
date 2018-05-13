@@ -19,6 +19,7 @@ else
             end
         end
     end
+    draw_board
     hgo = text(2, 3,'You have lost','fontsize',36,'fontweight','bold',...
         'fontname', 'Times New Roman',...
         'color',[1,0,0]);
