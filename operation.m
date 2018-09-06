@@ -1,5 +1,4 @@
 function new_a = operation(a)
-% a = [4 4 2 4];
 a = a(a>0);
 new_a = [];
 k = 1;

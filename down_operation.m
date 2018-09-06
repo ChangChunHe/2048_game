@@ -1,6 +1,5 @@
 function down_operation(~,~)
 global board rate_2 fail_tag start_tag
-% down operation
 if fail_tag == 1
     return
 end
@@ -34,3 +33,4 @@ else
 end
 draw_board
 end
+

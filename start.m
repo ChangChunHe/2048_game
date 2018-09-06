@@ -1,6 +1,5 @@
 function start(~, ~)
 global board h start_tag rate_2 h_patch
-
 if start_tag == 1
     h = zeros(15)*NaN;
     h_patch = h;

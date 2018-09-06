@@ -14,6 +14,9 @@ switch key
         down_operation
     case 'uparrow'
         up_operation
+    case 'space'
+        restart
     otherwise
         return ;
 end
+
