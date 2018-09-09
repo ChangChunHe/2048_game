@@ -1,6 +1,6 @@
 function AIhint(~,~)
-global board title_h fail_tag
-if fail_tag
+global board title_h fail_tag start_tag
+if fail_tag || start_tag == 1
     return
 end
 direction = get_next_direct(board);

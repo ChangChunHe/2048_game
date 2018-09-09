@@ -1,6 +1,6 @@
 function main_ai(~, ~)
-global board fail_tag pauseAI_or_not
-if fail_tag == 1
+global board fail_tag pauseAI_or_not start_tag
+if fail_tag == 1 || start_tag == 1
     return
 end
 pauseAI_or_not = 0;
