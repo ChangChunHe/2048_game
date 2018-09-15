@@ -11,29 +11,29 @@ elseif direct == 3 %down
     board = rot90(board, 3);
 end
 for i = 1:n
-    lastMergePosition = 1;
+    last_merge_position = 1;
     for j = 2:n
         if(board(i,j)==0)
             continue; %skip moving zeros
         end 
-        previousPosition = j-1;
-              while((previousPosition>lastMergePosition) && (board(i,previousPosition)==0)) %skip all the zeros
-                    previousPosition = previousPosition - 1;
+        previous_position = j-1;
+              while((previous_position>last_merge_position) && (board(i,previous_position)==0)) %skip all the zeros
+                    previous_position = previous_position - 1;
               end
-                if(previousPosition==j)
+                if(previous_position==j)
                     %we can't move this at all
-                elseif(board(i,previousPosition)==0)
+                elseif(board(i,previous_position)==0)
                     %move to empty value
-                    board(i,previousPosition)=board(i,j);
+                    board(i,previous_position)=board(i,j);
                     board(i,j)=0;
-                elseif(board(i,previousPosition)==board(i,j))
+                elseif(board(i,previous_position)==board(i,j))
                     %merge with matching value
-                    board(i,previousPosition) = 2 * board(i,previousPosition);
+                    board(i,previous_position) = 2 * board(i,previous_position);
                     board(i,j)=0;
-                    points=points+board(i,previousPosition);
-                    lastMergePosition=previousPosition+1;
-                elseif((board(i,previousPosition)~=board(i,j)) && ((previousPosition+1)~=j))
-                    board(i,(previousPosition+1))=board(i,j);
+                    points=points+board(i,previous_position);
+                    last_merge_position=previous_position+1;
+                elseif((board(i,previous_position)~=board(i,j)) && ((previous_position+1)~=j))
+                    board(i,(previous_position+1))=board(i,j);
                     board(i,j) = 0;
                 end
     end
