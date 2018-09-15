@@ -16,8 +16,8 @@ for i = 1:size_of_board(1)
             if x < 1 || x > size_of_board(1)
                 continue
             end
-            for neiIdx2 = 1:len
-                l = neighbors(neiIdx2);
+            for nei_idx2 = 1:len
+                l = neighbors(nei_idx2);
                 y = j+l;
                 if y < 1 || y > size_of_board(2)
                     continue
