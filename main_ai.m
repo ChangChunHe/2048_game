@@ -4,6 +4,7 @@ if fail_tag == 1 || start_tag == 1
     return
 end
 pauseAI_or_not = 0;
+% k = 1;
 while 1
     direct =  get_next_direct(board);
     if strcmp(direct, 'left')
@@ -22,7 +23,7 @@ while 1
 %     frame=getframe(gcf);
 %     im=frame2im(frame);
 %     [I,map]=rgb2ind(im,256);
-%     if k==1
+%     if k == 1
 %        imwrite(I,map,'out.gif','gif','LoopCount',inf);
 %     else
 %         imwrite(I,map,'out.gif','gif','WriteMode','append','DelayTime', 0.1);
