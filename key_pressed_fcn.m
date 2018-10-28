@@ -16,6 +16,12 @@ switch key
         up_operation
     case 'space'
         restart
+    case 'f1'
+        AIhint
+    case 'return'
+        main_ai
+    case 'shift'
+        pause_AI
     otherwise
         return ;
 end
